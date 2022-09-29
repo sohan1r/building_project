@@ -34,6 +34,7 @@ class _interiorDesignItemsState extends State<InteriorDesignItems> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: Center(
         child: FutureBuilder<List<CategoryModel>>(
             future: fetchJson(),
