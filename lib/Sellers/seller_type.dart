@@ -49,7 +49,13 @@ class _sellerTypeState extends State<SellerType> {
               child: ElevatedButton(
                   style: const ButtonStyle(),
                   onPressed: () {
-                    setState(() {});
+                    setState(() {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: ((context) =>
+                                  const SellerRegistration())));
+                    });
                     // Future.delayed(const Duration(seconds: 3), () {
                     //   setState(() {
                     //     isLoading = false;
@@ -91,6 +97,11 @@ class _sellerTypeState extends State<SellerType> {
                   onPressed: () {
                     setState(() {
                       isLoading = true;
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const SellerRegistration()));
                     });
                     // Future.delayed(const Duration(seconds: 3), () {
                     //   setState(() {
@@ -132,6 +143,10 @@ class _sellerTypeState extends State<SellerType> {
                 onPressed: () {
                   setState(() {
                     isLoading = true;
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const SellerRegistration()));
                   });
                   // Future.delayed(Duration(seconds: 3), () {
                   //   setState(() {

@@ -3,10 +3,7 @@ import 'dart:async';
 import 'package:building_project/Screens/dashboard.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
-import 'dart:developer';
-import 'dart:io';
 import 'package:http/http.dart' as http;
-import 'package:provider/provider.dart';
 
 class MyRegister extends StatefulWidget {
   const MyRegister({Key? key}) : super(key: key);
@@ -49,7 +46,7 @@ class _MyRegisterState extends State<MyRegister> {
     if (response.statusCode == 200) {
       jsonResponse = json.decode(response.body.toString());
       ScaffoldMessenger.of(context)
-          .showSnackBar(SnackBar(content: Text(" ${jsonResponse['Message']}")));
+          .showSnackBar(SnackBar(content: Text(" ${jsonResponse['user']}")));
 
       //Or put here your next screen using Navigator.push() method
       print('success');
@@ -60,6 +57,9 @@ class _MyRegisterState extends State<MyRegister> {
       print(data['token']);
     } else {
       print('error');
+      ScaffoldMessenger.of(context)
+          .showSnackBar(SnackBar(content: Text(" ${jsonResponse['error']}")));
+      return;
     }
   }
 

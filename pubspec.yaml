@@ -47,7 +47,7 @@ dependencies:
   dropdown_textfield: ^1.0.3
   convert: ^3.0.2
   google_sign_in: ^5.4.2
-  permission_handler: ^10.0.0
+  permission_handler: ^10.0.2
  
   
   
